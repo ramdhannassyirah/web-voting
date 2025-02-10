@@ -9,8 +9,7 @@
             <div class="p-4 mb-4 text-red-700 bg-red-200 rounded-lg">{{ session('error') }}</div>
         @endif
 
-        <form action="{{ route('admin.invites.store') }}" method="POST"
-            class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow">
+        <form action="{{ route('invites.store') }}" method="POST" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow">
             @csrf
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-semibold mb-2">Email Tujuan</label>

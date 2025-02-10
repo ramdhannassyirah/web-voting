@@ -1,12 +1,17 @@
 <x-admin.layout>
-    <div class="container mx-auto mt-10">
-        <h1 class="text-2xl font-bold text-center mb-6">Daftar Token Voting</h1>
+    <div class="container mx-auto">
 
-        <div class="mb-4">
-            <a href="{{ route('dashboard') }}"
-                class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-700 transition">
-                Kembali ke Dashboard
-            </a>
+        <div class="flex w-full justify-between items-center  mb-4">
+            <nav>
+                <ol class="flex items-center gap-2 mb-4">
+                    <li>
+                        <a class="font-medium" href="index.html">Dashboard /</a>
+                    </li>
+                    <li class="font-medium text-primary">Daftar Pemilih</li>
+                </ol>
+            </nav>
+            <a href="{{ route('invites.create') }}" class="px-4 py-2 text-white bg-blue-500 rounded-md">Create Token
+                Pemilih</a>
         </div>
 
         <table class="w-full border-collapse border border-gray-300">

@@ -2,8 +2,7 @@
     <div class="flex items-center justify-between flex-grow px-4 py-4 shadow-2 md:px-6 2xl:px-11">
         <div class="flex items-center gap-2 sm:gap-4 lg:hidden">
             <!-- Hamburger Toggle BTN -->
-            <button
-                class="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
+            <button class="z-99999 block rounded-sm  bg-white p-1.5 shadow-sm  dark:bg-boxdark lg:hidden"
                 @click.stop="sidebarToggle = !sidebarToggle">
                 <span class="relative block h-5.5 w-5.5 cursor-pointer">
                     <span class="absolute right-0 w-full h-full du-block">
@@ -28,8 +27,8 @@
                 </span>
             </button>
             <!-- Hamburger Toggle BTN -->
-            <a class="flex-shrink-0 block lg:hidden" href="index.html">
-                <img src="./images/logo/logo-icon.svg" alt="Logo" />
+            <a class="flex-shrink-0 block lg:hidden text-xl" href="index.html">
+                Ballot Box
             </a>
         </div>
 
@@ -151,14 +150,19 @@
 
             <!-- User Area -->
             <div class="relative" x-data="{ dropdownOpen: false }" @click.outside="dropdownOpen = false">
-                <a class="flex items-center gap-4" href="#" @click.prevent="dropdownOpen = ! dropdownOpen">
+                <a class="flex items-center gap-1" href="#" @click.prevent="dropdownOpen = ! dropdownOpen">
                     <span class="hidden text-right lg:block">
                         <span class="block text-sm font-medium text-black dark:text-white">Thomas Anree</span>
                         <span class="block text-xs font-medium">UX Designer</span>
                     </span>
 
-                    <span class="w-12 h-12 border rounded-full">
-                        <img src="./images/user/user-01.png" alt="User" />
+                    <span class="w-12 h-12 flex items-center justify-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" class="fill-current" fill="none"
+                            height="26" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z">
+                            </path>
+                        </svg>
                     </span>
 
 
@@ -168,22 +172,6 @@
                 <div x-show="dropdownOpen"
                     class="absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
                     <ul class="flex flex-col gap-5 border-b border-stroke px-6 py-7.5 dark:border-strokedark">
-                        <li>
-                            <a href="profile.html"
-                                class="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base">
-                                <svg class="fill-current" width="22" height="22" viewBox="0 0 22 22"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11 9.62499C8.42188 9.62499 6.35938 7.59687 6.35938 5.12187C6.35938 2.64687 8.42188 0.618744 11 0.618744C13.5781 0.618744 15.6406 2.64687 15.6406 5.12187C15.6406 7.59687 13.5781 9.62499 11 9.62499ZM11 2.16562C9.28125 2.16562 7.90625 3.50624 7.90625 5.12187C7.90625 6.73749 9.28125 8.07812 11 8.07812C12.7188 8.07812 14.0938 6.73749 14.0938 5.12187C14.0938 3.50624 12.7188 2.16562 11 2.16562Z"
-                                        fill="" />
-                                    <path
-                                        d="M17.7719 21.4156H4.2281C3.5406 21.4156 2.9906 20.8656 2.9906 20.1781V17.0844C2.9906 13.7156 5.7406 10.9656 9.10935 10.9656H12.925C16.2937 10.9656 19.0437 13.7156 19.0437 17.0844V20.1781C19.0094 20.8312 18.4594 21.4156 17.7719 21.4156ZM4.53748 19.8687H17.4969V17.0844C17.4969 14.575 15.4344 12.5125 12.925 12.5125H9.07498C6.5656 12.5125 4.5031 14.575 4.5031 17.0844V19.8687H4.53748Z"
-                                        fill="" />
-                                </svg>
-                                My Profile
-                            </a>
-                        </li>
-
                         <li>
                             <a href="settings.html"
                                 class="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base">

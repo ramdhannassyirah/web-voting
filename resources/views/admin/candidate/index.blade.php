@@ -1,7 +1,14 @@
 <x-admin.layout>
-    <div class="flex justify-between mb-4">
-        <h1 class="text-xl font-bold">Candidate List</h1>
-        <a href="{{ route('candidates.create') }}" class="px-4 py-2 text-white bg-blue-500 rounded-lg">Add Candidate</a>
+
+
+    <div class="flex w-full justify-between items-center  mb-4">
+        <ol class="flex items-center gap-2 mb-4">
+            <li>
+                <a class="font-medium" href="index.html">Dashboard /</a>
+            </li>
+            <li class="font-medium text-primary">Daftar Calon</li>
+        </ol>
+        <a href="{{ route('candidates.create') }}" class="px-4 py-2 text-white bg-blue-500 rounded-md">Buat Calon</a>
     </div>
 
     @if (session('success'))
@@ -13,10 +20,10 @@
     <table class="w-full border border-collapse border-gray-300">
         <thead>
             <tr class="bg-gray-100">
-                <th class="p-2 border">#</th>
-                <th class="p-2 border">Title</th>
-                <th class="p-2 border">Chairman</th>
-                <th class="p-2 border">Vice Chairman</th>
+                <th class="p-2 border">No</th>
+                <th class="p-2 border">Nama Paslon</th>
+                <th class="p-2 border">Ketua</th>
+                <th class="p-2 border">Wakil Ketua</th>
                 <th class="p-2 border">Total Suara</th>
                 <th class="p-2 border">Action</th>
             </tr>
@@ -24,7 +31,7 @@
         <tbody>
             @foreach ($candidates as $candidate)
                 <tr>
-                    <td class="p-2 border">{{ $loop->iteration }}</td>
+                    <td class="p-2 border text-center">{{ $loop->iteration }}</td>
                     <td class="p-2 border">{{ $candidate->title }}</td>
                     <td class="p-2 border">{{ $candidate->chairman }}</td>
                     <td class="p-2 border">{{ $candidate->vice_chairman }}</td>
