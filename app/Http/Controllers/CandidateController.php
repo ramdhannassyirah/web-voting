@@ -7,11 +7,20 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 class CandidateController extends Controller
-{
+{   
+    public function dashboard(){
+        $candidates = Candidate::withCount('votes')->get();
+        return view('admin.dashboard', compact('candidates'));
+    }
+
     public function index()
     {
-        $candidates = Candidate::where('user_id', auth()->id())->get();
-        return view('admin.candidate.index', compact('candidates'));
+        $candidates = Candidate::where('user_id', auth()->id())
+        ->withCount('votes') 
+        ->get();
+    
+    return view('admin.candidate.index', compact('candidates'));
+    
     }
 
     public function create()
@@ -27,6 +36,7 @@ class CandidateController extends Controller
             'vice_chairman' => 'required',
             'vision' => 'required',
             'mision' => 'required',
+            'ordinal_number' => 'required',
             'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
@@ -41,6 +51,7 @@ class CandidateController extends Controller
             'vice_chairman' => $request->vice_chairman,
             'vision' => $request->vision,
             'mision' => $request->mision,
+            'ordinal_number' => $request->ordinal_number,
         ]);
 
         return redirect()->route('candidates.index')->with('success', 'Candidate added successfully.');

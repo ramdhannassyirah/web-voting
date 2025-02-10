@@ -17,6 +17,7 @@
                 <th class="p-2 border">Title</th>
                 <th class="p-2 border">Chairman</th>
                 <th class="p-2 border">Vice Chairman</th>
+                <th class="p-2 border">Total Suara</th>
                 <th class="p-2 border">Action</th>
             </tr>
         </thead>
@@ -27,6 +28,7 @@
                     <td class="p-2 border">{{ $candidate->title }}</td>
                     <td class="p-2 border">{{ $candidate->chairman }}</td>
                     <td class="p-2 border">{{ $candidate->vice_chairman }}</td>
+                    <td class="p-2 border">{{ $candidate->votes_count }} Suara</td>
                     <td class="p-2 border">
                         <a href="{{ route('candidates.edit', $candidate->slug) }}" class="text-blue-500">Edit</a>
                         <form action="{{ route('candidates.destroy', $candidate->slug) }}" method="POST"

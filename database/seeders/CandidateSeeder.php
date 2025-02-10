@@ -20,6 +20,7 @@ class CandidateSeeder extends Seeder
             'vice_chairman' => 'Rina Amelia',
             'vision' => 'Menjadikan sekolah lebih inovatif dan maju.',
             'mision' => '1. Mengembangkan kreativitas siswa\n2. Memperkuat karakter kepemimpinan',
+            'ordinal_number' => 1,
         ]);
     }
 }

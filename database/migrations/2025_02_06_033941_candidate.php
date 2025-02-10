@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('chairman', 255);
             $table->string('vice_chairman', 255);
+            $table->integer('ordinal_number');
             $table->text('vision');
             $table->text('mision');
             $table->timestamps();

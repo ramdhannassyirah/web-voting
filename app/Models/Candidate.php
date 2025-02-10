@@ -13,7 +13,7 @@ class Candidate extends Model
 
     protected $fillable = [
         'user_id', 'image_url', 'title', 'slug',
-        'chairman', 'vice_chairman', 'vision', 'mision'
+        'chairman', 'vice_chairman', 'vision', 'mision','ordinal_number'
     ];
 
     public static function boot()
@@ -54,6 +54,13 @@ class Candidate extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    // Relasi Votes 
+    public function votes()
+    {
+        return $this->hasMany(Vote::class);
+    }
+
 
     // Gunakan slug sebagai key dalam routing
     public function getRouteKeyName()

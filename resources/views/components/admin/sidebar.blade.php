@@ -3,8 +3,8 @@
     @click.outside="sidebarToggle = false">
     <!-- SIDEBAR HEADER -->
     <div class="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
-        <a href="index.html">
-            <img src="./images/logo/logo.svg" alt="Logo" />
+        <a class="text-center text-white text-3xl" href="index.html">
+            BallotBox
         </a>
 
         <button class="block lg:hidden" @click.stop="sidebarToggle = !sidebarToggle">
@@ -29,7 +29,7 @@
                     <!-- Menu Item Dashboard -->
                     <li>
                         <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                            href="">
+                            href="{{ route('dashboard') }}">
                             <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -70,9 +70,7 @@
                     <!-- Menu Item Voters -->
                     <li>
                         <a class="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                            href="Candidate.html" @click="selected = (selected === 'Candidate' ? '':'Candidate')"
-                            :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Candidate') && (page === 'Candidate') }"
-                            :class="page === 'Candidate' && 'bg-graydark'">
+                            href="{{ route('invites.index') }}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" class="fill-current" fill="none"
                                 height="18" viewBox="0 0 24 24">
                                 <path
