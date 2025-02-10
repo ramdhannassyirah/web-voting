@@ -11,14 +11,6 @@ Proyek ini adalah aplikasi web voting berbasis Laravel yang memungkinkan penggun
 - Manajemen pengguna (admin)
 - Middleware untuk perlindungan akses
 
-## Prasyarat
-Sebelum menjalankan proyek ini, pastikan sistem Anda telah memenuhi persyaratan berikut:
-- PHP >= 8.0
-- Composer
-- Laravel >= 9.x
-- MySQL atau PostgreSQL
-- Node.js dan NPM (untuk asset build dengan Vite atau Laravel Mix)
-
 ## Instalasi
 1. Clone repositori ini:
    ```sh
